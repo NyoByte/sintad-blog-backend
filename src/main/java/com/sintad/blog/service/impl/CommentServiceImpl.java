@@ -19,9 +19,6 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public CommentDto addComment(CommentDto comment) {
-        System.out.println("================");
-        System.out.println(comment);
-        System.out.println("================");
         CommentEntity newComment = commentRepository.save(commentMapper.toEntity(comment));
         CommentDto savedComment = commentMapper.toDto(newComment);
         // Publicar el comentario en el canal WebSocket

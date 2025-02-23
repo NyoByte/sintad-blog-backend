@@ -1,6 +1,7 @@
 package com.sintad.blog.service;
 
 import com.sintad.blog.dto.ArticleDto;
+import com.sintad.blog.util.PagedResponse;
 
 import java.util.List;
 
@@ -8,6 +9,8 @@ public interface ArticleService {
 
     ArticleDto findById(Long id);
 
-    List<ArticleDto> findAll();
+    PagedResponse<ArticleDto> findAll(int page);
+
+    List<ArticleDto> findPopularArticles();
 
 }
