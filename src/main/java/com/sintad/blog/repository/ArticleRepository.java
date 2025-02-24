@@ -17,4 +17,6 @@ public interface ArticleRepository extends JpaRepository<ArticleEntity, Long> {
 
     List<ArticleEntity> findByViewsGreaterThanEqualOrderByViewsDesc(int views);
 
+    List<ArticleEntity> findByAuthorUsername(String username);
+
 }

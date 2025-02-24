@@ -59,7 +59,7 @@ public class ArticleEntity implements Serializable {
 
     @Builder.Default
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CommentEntity> comments = new ArrayList<>();;
+    private List<CommentEntity> comments = new ArrayList<>();
 
     public ArticleEntity(Long id) {
         this.id = id;

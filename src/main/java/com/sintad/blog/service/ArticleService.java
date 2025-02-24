@@ -13,4 +13,12 @@ public interface ArticleService {
 
     List<ArticleDto> findPopularArticles();
 
+    List<ArticleDto> findMyArticles(String tokenWithBearer);
+
+    ArticleDto create(ArticleDto articleDto);
+
+    ArticleDto update(Long id, ArticleDto articleDto);
+
+    void delete(Long id);
+
 }

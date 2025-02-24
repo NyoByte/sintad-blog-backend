@@ -12,14 +12,13 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
-        // Define el prefijo para las rutas de los mensajes.
         config.enableSimpleBroker("/topic", "/queue"); // Topic es para broadcast, Queue es para mensajes privados
         config.setApplicationDestinationPrefixes("/app"); // Prefijo de los mensajes de los controladores
     }
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws").setAllowedOriginPatterns("http://localhost:4300").withSockJS();; // /ws es el punto final para WebSocket
+        registry.addEndpoint("/ws").setAllowedOriginPatterns("http://localhost:4300").withSockJS();
     }
 
 }

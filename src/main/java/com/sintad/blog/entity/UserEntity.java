@@ -53,10 +53,10 @@ public class UserEntity implements Serializable {
 
     @Builder.Default
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ArticleEntity> articles = new ArrayList<>();;
+    private List<ArticleEntity> articles = new ArrayList<>();
 
     @Builder.Default
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CommentEntity> comments = new ArrayList<>();;
+    private List<CommentEntity> comments = new ArrayList<>();
 
 }
